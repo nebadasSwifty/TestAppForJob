@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import UIKit
-
 
 final class Guessing {
     
@@ -30,6 +28,7 @@ final class Guessing {
         maxValue = 100
         guessedComputerNumber = Int.random(in: 0...100)
     }
+    
     func binValue() -> Int {
         
         let s = maxValue - minValue
@@ -37,26 +36,9 @@ final class Guessing {
         
         return d
     }
-    func compareAttemps(_ sender: UILabel) {
-        if attempPlayer == attempComputer {
-            sender.text = "Ничья"
-        } else if attempPlayer < attempComputer  {
-            sender.text = "Ты выиграл"
-        } else {
-            sender.text = "Компьютер выиграл"
-        }
-    }
+    
 }
-//MARK: - Extension
-extension UIViewController {
-    func hiddingKeyboardOnTapAnywhere() {
-        let tapHideScreen = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
-        view.addGestureRecognizer(tapHideScreen)
-    }
-    @objc func hideKeyboard() {
-        view.endEditing(true)
-    }
-}
+
 
 
 

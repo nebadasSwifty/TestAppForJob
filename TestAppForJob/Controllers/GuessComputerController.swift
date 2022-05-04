@@ -49,3 +49,13 @@ final class GuessComputerController: UIViewController {
     }
 }
 
+//MARK: - Extension
+extension UIViewController {
+    func hiddingKeyboardOnTapAnywhere() {
+        let tapHideScreen = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
+        view.addGestureRecognizer(tapHideScreen)
+    }
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
+}
