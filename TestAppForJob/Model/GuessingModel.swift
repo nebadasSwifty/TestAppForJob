@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class Guessing {
+class Guessing {
     
     //MARK: - Variables
     static let sharing = Guessing()

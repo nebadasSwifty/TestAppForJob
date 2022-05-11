@@ -7,16 +7,18 @@
 
 import UIKit
 
-final class GuessComputerController: UIViewController {
+class GuessComputerController: UIViewController {
     //MARK: - Variables
-    @IBOutlet weak var attempsPlayerLabel: UILabel!
+    @IBOutlet weak var attempsPlayerLabel: UILabel! {
+        didSet {
+            updateInfo()
+        }
+    }
     @IBOutlet weak var guessesPlayerNumber: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hiddingKeyboardOnTapAnywhere()
-        updateInfo()
-        navigationController?.isNavigationBarHidden = true
     }
     
     //MARK: - Methods
@@ -36,26 +38,7 @@ final class GuessComputerController: UIViewController {
         }
         updateInfo()
     }
-    private func showAlert(_ message: String) {
-        let alert = UIAlertController(title: "Внимание", message: message, preferredStyle: .alert)
-        let okAlert = UIAlertAction(title: "OK", style: .default)
-        let cancelAlert = UIAlertAction(title: "Отмена", style: .cancel)
-        alert.addAction(okAlert)
-        alert.addAction(cancelAlert)
-        present(alert, animated: true)
-    }
     private func updateInfo() {
         attempsPlayerLabel.text = "Попытка № \(Guessing.sharing.attempPlayer)"
-    }
-}
-
-//MARK: - Extension
-extension UIViewController {
-    func hiddingKeyboardOnTapAnywhere() {
-        let tapHideScreen = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
-        view.addGestureRecognizer(tapHideScreen)
-    }
-    @objc func hideKeyboard() {
-        view.endEditing(true)
     }
 }

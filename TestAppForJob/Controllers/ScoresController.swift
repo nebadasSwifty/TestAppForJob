@@ -7,18 +7,26 @@
 
 import UIKit
 
-final class ScoresController: UIViewController {
+class ScoresController: UIViewController {
     //MARK: - Variables
-    @IBOutlet weak var playerAttempsLabel: UILabel!
-    @IBOutlet weak var computerAttempsLabel: UILabel!
-    @IBOutlet weak var winningLabel: UILabel!
-    
+    @IBOutlet weak var playerAttempsLabel: UILabel! {
+        didSet {
+            playerAttempsLabel.text = "Ты сделал \(Guessing.sharing.attempPlayer) попытки для отгадывания"
+        }
+    }
+    @IBOutlet weak var computerAttempsLabel: UILabel! {
+        didSet {
+            computerAttempsLabel.text = "Компьютер сделал \(Guessing.sharing.attempComputer) попытки для отгадывания"
+        }
+    }
+    @IBOutlet weak var winningLabel: UILabel! {
+        didSet {
+            compareAttemps(winningLabel)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        computerAttempsLabel.text = "Компьютер сделал \(Guessing.sharing.attempComputer) попытки для отгадывания"
-        playerAttempsLabel.text = "Ты сделал \(Guessing.sharing.attempPlayer) попытки для отгадывания"
-        compareAttemps(winningLabel)
     }
     //MARK: - Actions
     @IBAction func mainMenuButtonPressed(_ sender: UIButton) {

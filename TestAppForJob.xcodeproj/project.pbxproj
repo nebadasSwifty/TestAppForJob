@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED713D8D282C04FD00BE2F51 /* HelperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED713D8C282C04FD00BE2F51 /* HelperController.swift */; };
 		ED9576FE282030290032A78B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9576FD282030290032A78B /* AppDelegate.swift */; };
 		ED957700282030290032A78B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9576FF282030290032A78B /* SceneDelegate.swift */; };
 		ED957702282030290032A78B /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED957701282030290032A78B /* StartViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED713D8C282C04FD00BE2F51 /* HelperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperController.swift; sourceTree = "<group>"; };
 		ED9576FA282030290032A78B /* TestAppForJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAppForJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9576FD282030290032A78B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED9576FF282030290032A78B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED713D8B282C04E500BE2F51 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ED713D8C282C04FD00BE2F51 /* HelperController.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		ED9576F1282030290032A78B = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		ED9576FC282030290032A78B /* TestAppForJob */ = {
 			isa = PBXGroup;
 			children = (
+				ED713D8B282C04E500BE2F51 /* Helpers */,
 				ED9577132820303F0032A78B /* Controllers */,
 				ED9577122820303A0032A78B /* Views */,
 				ED957711282030360032A78B /* Model */,
@@ -184,6 +195,7 @@
 				ED957715282041440032A78B /* GuessingController.swift in Sources */,
 				ED957702282030290032A78B /* StartViewController.swift in Sources */,
 				ED9576FE282030290032A78B /* AppDelegate.swift in Sources */,
+				ED713D8D282C04FD00BE2F51 /* HelperController.swift in Sources */,
 				ED957700282030290032A78B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
